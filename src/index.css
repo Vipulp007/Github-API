@@ -1,13 +1,320 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0%;
+  background-color: #f1f5f8;
+}
+/* login page styling */
+.parent_login {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+/* login image styling */
+.login_img {
+  width: 583px;
+  height: 343.6px;
+  margin: 0%;
+  mix-blend-mode: multiply;
+}
+.git_text {
+  margin: 0%;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  color: #102a42;
+}
+/* button styling */
+.btn {
+  margin-top: -25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  background-color: #2caeba;
+  color: #e0fcff;
+  font-weight: 500;
+  font-family: sans-serif;
+  padding-top: 12px;
+  width: 170.29px;
+  height: 32px;
+  border-radius: 10px;
+  border: none;
+  letter-spacing: 1px;
+}
+:hover.btn {
+  background-color: #88ebf2;
+  cursor: pointer;
+  color: black;
+  box-shadow: 3px 3px 20px rgba(0, 255, 255, 0.52);
+}
+/* preloader css  */
+.loading {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+.loading::after {
+  content: '';
+  width: 150px;
+  height: 150px;
+  border: 20px solid lightgrey;
+  border-top-color: lightseagreen;
+  border-radius: 50%;
+  animation: loader ease infinite 0.8s;
+}
+@keyframes loader {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* navigation styling  */
+.navigation {
+  display: grid;
+  place-items: center;
+  background-color: white;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 2px 2px 10px lightgrey;
+}
+
+/* followers,following,repos,gists information block sytling */
+.follow_info {
+  height: 100px;
+  width: 96vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.container_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: white;
+  width: 225px;
+  text-align: center;
+}
+/* react icon block styling */
+.icon {
+  color: rgb(244, 28, 136);
+  padding: 15px 15px;
+  display: grid;
+  place-items: center;
+  font-size: x-large;
+  border-radius: 50%;
+  background-color: rgba(244, 178, 244, 0.327);
+}
+h2,
+.text {
+  margin: 0%;
+  text-transform: capitalize;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.75rem;
+  color: #102a42;
+}
+.text {
+  font-size: medium;
+  color: #617d98;
+  margin-top: 5px;
+}
+.i2 {
+  background-color: #e0fcff;
+  color: #2caeba;
+}
+.i3 {
+  background-color: #e6e6ff;
+  color: rgba(93, 85, 250);
+}
+.i4 {
+  background-color: #fffbea;
+  color: rgb(240, 180, 41);
+}
+
+/* search bar styling */
+.serch_bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;
+  width: 66vw;
+  margin: auto;
+  border-radius: 8px;
+}
+.search_icon {
+  color: #617d98;
+  font-size: x-large;
+}
+.search_box {
+  border-radius: 5px;
+  margin-left: 15px;
+  width: 50vw;
+  height: 5vh;
+  font-size: large;
+  padding-left: 10px;
+  border: none;
+  color: #617d98;
+  outline-color: #f1f5f8;
+}
+.search_form {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.search_btn {
+  margin: 0%;
+  padding-top: 3px;
+  box-shadow: 1px 3px 10px lightgrey;
+  width: 110px;
+}
+.link {
+  text-decoration: none;
+  color: #617d98;
+}
+:hover.search_btn {
+  box-shadow: none;
+  box-shadow: 2px 3px 10px lightgrey;
+}
+/* card component styling  */
+.card_parent {
+  display: flex;
+  /* width: 100vw; */
+  justify-content: space-evenly;
+}
+.card_container {
+  background-color: white;
+  width: 45vw;
+  text-align: justify;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.card_profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40vw;
+  margin: auto;
+}
+.card_img {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+}
+.name_info {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.other_info {
+  width: 20vw;
+  margin-left: 3vw;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+  height: 30vh;
+}
+.geo_info {
+  padding: 5px;
+  display: flex;
+}
+.info_text {
+  margin-left: 10px;
+}
+.link_text {
+  color: #2caeba;
+  text-transform: none;
+  font-size: medium;
+}
+.bio {
+  color: #102a42;
+  width: 40vw;
+}
+.card_btn {
+  margin: 0%;
+  background-color: transparent;
+  color: #2caeba;
+  border: 1px solid #2caeba;
+  width: 110px;
+  padding-top: 3px;
+  border-radius: 20px;
+}
+:hover.card_btn {
+  background-color: #2caeba;
+  box-shadow: none;
+  color: white;
+}
+.inner_profile {
+  margin-left: 20px;
+  text-align: center;
+  color: #617d98;
+  font-size: large;
+}
+.name_text {
+  color: #102a42;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+.user_nav,
+.follower_nav {
+  background-color: white;
+  width: 4vw;
+  padding: 8px;
+  text-align: center;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  font-size: large;
+  letter-spacing: 1px;
+  color: #617d98;
+}
+
+/* follower component */
+.follower_info {
+  /* overflow: scroll; */
+  width: 40vw;
+}
+.follower_img {
+  height: 45px;
+  width: 45px;
+}
+.follower_container {
+  overflow-y: scroll;
+  height: 53.6vh;
+}
+.geofollower_info {
+  display: flex;
+}
+.follower_text {
+  text-align: right;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #102a42;
+  font-size: large;
+  font-weight: bold;
+}
+.git_url {
+  display: flex;
+}
+.url_follower {
+  color: #617d98;
+  text-transform: none;
+  text-decoration: none;
+  font-size: large;
+  font-weight: normal;
+}
+.follower_nav {
+  width: 8vw;
+}
+.chart-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 10vh;
+  margin-left: 30px;
+  width: 90vw;
+  align-self: center;
 }
