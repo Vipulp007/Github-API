@@ -68,14 +68,52 @@ body {
 
 /* navigation styling  */
 .navigation {
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  padding: 15px;
   background-color: white;
   text-transform: capitalize;
   font-family: Arial, Helvetica, sans-serif;
   box-shadow: 2px 2px 10px lightgrey;
 }
-
+.wlcm {
+  text-transform: capitalize;
+  font-weight: lighter;
+  color: #617d98;
+  letter-spacing: 1px;
+  font-size: medium;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.profile_img {
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+}
+.profile_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 20vw;
+}
+.profile_name {
+  font-size: large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logout-btn {
+  border: none;
+  font-size: larger;
+  letter-spacing: normal;
+  background-color: transparent;
+  margin-right: 2vw;
+  margin-left: auto;
+}
+:hover.logout-btn {
+  text-decoration: underline;
+  cursor: pointer;
+}
 /* followers,following,repos,gists information block sytling */
 .follow_info {
   height: 100px;
@@ -132,6 +170,18 @@ h2,
 }
 
 /* search bar styling */
+.search_req {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 92vw;
+}
+.request {
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
 .serch_bar {
   display: flex;
   align-items: center;

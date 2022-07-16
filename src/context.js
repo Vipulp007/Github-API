@@ -6,7 +6,9 @@ const AppProvider = ({ children }) => {
   const [follower, setfollower] = useState([]);
   const [query, setquery] = useState('john-smilga');
   const [repos, setrepos] = useState([]);
+  const [request, setrequest] = useState({});
   const url = `https://api.github.com/users/${query}`;
+  const req_url = `https://api.github.com/rate_limit`;
   const fetchurl = async () => {
     setloading(true);
     const response = await fetch(url);
@@ -15,9 +17,16 @@ const AppProvider = ({ children }) => {
     const data_follower = await response_follower.json();
     const response_repos = await fetch(data.repos_url);
     const data_repos = await response_repos.json();
+    const response_req = await fetch(req_url);
+    const data_req = await response_req.json();
+    const reques = {
+      limit: data_req.resources.core.limit,
+      remain: data_req.resources.core.remaining,
+    };
     setrepos(data_repos);
     setuserdata(data);
     setfollower(data_follower);
+    setrequest(reques);
     setloading(false);
   };
   useEffect(() => {
@@ -31,6 +40,7 @@ const AppProvider = ({ children }) => {
         query,
         follower,
         repos,
+        request,
         setquery,
       }}
     >
